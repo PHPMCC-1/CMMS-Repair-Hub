@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --php-orange: #F37022;
+  --php-navy: #063452;
+  --php-bg-day: #F4F7F9;
+  --php-bg-night: #041B2D;
+  --php-card-night: #07263D;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+body {
+  background-color: #F4F7F9;
+  color: #063452;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: #041B2D;
+  color: #F0F7F8;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Enterprise Grid Table Discipline: crisp horizontal & vertical cell borders, middle vertical alignment, and tabular numerals */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+table th,
+table td {
+  vertical-align: middle;
+  border-right: 1px solid rgba(6, 52, 82, 0.14);
+  border-bottom: 1px solid rgba(6, 52, 82, 0.14);
+  line-height: 1.35;
+}
+
+table thead th {
+  background-color: #EEF3F7;
+  color: #063452;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(6, 52, 82, 0.22);
+  white-space: nowrap;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(244, 247, 249, 0.55);
+}
+
+table tbody tr:hover {
+  background-color: rgba(6, 52, 82, 0.045);
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: none;
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Dark / Night Mode Enterprise Table Overrides */
+.dark table th,
+.dark table td {
+  border-right: 1px solid rgba(152, 186, 201, 0.16);
+  border-bottom: 1px solid rgba(152, 186, 201, 0.16);
+}
+
+.dark table thead th {
+  background-color: #041B2D;
+  color: #98BAC9;
+  border-bottom: 2px solid #1B496B;
+}
+
+.dark table tbody tr:nth-child(even) {
+  background-color: rgba(4, 27, 45, 0.35);
+}
+
+.dark table tbody tr:hover {
+  background-color: rgba(11, 53, 84, 0.45);
+}
+
+.dark table th:last-child,
+.dark table td:last-child {
+  border-right: none;
+}
+
+.dark table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Specification Key-Value Tables (Equipment Profile & Work Order Drawer) */
+.php-spec-table tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.php-spec-table tbody th {
+  background-color: #F4F7F9;
+  color: #334E68;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dark .php-spec-table tbody th {
+  background-color: #041B2D;
+  color: #98BAC9;
+}
+

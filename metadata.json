@@ -1,0 +1,6 @@
+{
+  "name": "PHP Repair Hub Maintenance Command Center",
+  "description": "PHP Repair Hub Maintenance Command Center - GSE fleet, inventory, transmittals, and work orders dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
